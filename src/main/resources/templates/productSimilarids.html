@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="">
+<head>
+  <meta layout:charset="utf-8">
+  <title> Productos Similares </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body xmlns:th="http://www.w3.org/1999/xhtml">
+<div class="container">
+  <div th:fragment="content">
+
+    <h2>List of product similar</h2>
+
+      <table class="table table-stripped">
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Availability</th>
+
+        </tr>
+
+        <tr th:each="prod : ${product}">
+          <td th:text="${prod.id}">Id</td>
+          <td th:text="${prod.name}">Name</td>
+          <td th:text="${prod.price}">Price</td>
+          <td th:text="${prod.availability}">Availability</td>
+
+        </tr>
+      </table>
+    </form>
+    <div class="row">
+      <div class="col-sm-3">
+        <button>New Product</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

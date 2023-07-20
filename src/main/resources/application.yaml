@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: myApp
+
+datasource:
+  my-connection:
+    jdbc-url: jdbc:postgresql://localhost:5432/products_system
+    username: cdarias
+    password: cbda.94
+    maximum-pool-size: 10
+    pool-name: "myApp-pool"
+    auto-commit: true
+
+    thymeleaf:
+        enabled: true
+        prefix: classpath:/templates/
+        suffix: .html
